@@ -1,0 +1,37 @@
+# We want everything in these folders
+#!Plugins/**
+#!packages/**
+#!evennia/**
+#!TCPListener/**
+
+# Standard Unreal folders to be ignored
+Binaries/
+Build
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+
+*.a 
+*.app 
+*.dylib 
+*.gch 
+*.ipa 
+*.la 
+*.lai 
+*.lo 
+*.log
+*.mod 
+*.o 
+*.obj 
+*.opensdf 
+*.out 
+*.pch 
+*.sdf 
+*.sln 
+*.slo 
+*.so 
+*.suo 
+*.VC.db 
+*.VC.opendb 
+*.xcodeproj

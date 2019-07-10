@@ -1,0 +1,92 @@
+#
+@set Limbo/sound_url = /static/webclient/media/bird-whistle.wav
+#
+@set Limbo/image_url = https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fp.motionelements.com%2Fstock-video%2Farchitecture-buildings%2Fme8960612-dungeon-exit-ukraine-hd-a0060.jpg&amp;f=1
+#
+@set limbo/image_map = 
+<map name="Limbo_map" id="Limbo_map">
+    <area alt="" title="" href="#" data-command="left" shape="rect" coords="11,138,723,994" />
+    <area alt="" title="" href="#" data-command="straight" shape="rect" coords="735,162,1233,956" />
+    <area alt="" title="" href="#" data-command="right" shape="rect" coords="1267,158,1907,996" />
+</map>
+#
+
+
+#
+@dig LeftRoom = left,limbo
+#
+left
+#
+@set LeftRoom/sound_url = /static/webclient/media/bird_whistle_long.wav
+#
+@set LeftRoom/image_url = https://www.residentadvisor.net/images/reviews/2007/left009.jpg
+#
+@set LeftRoom/image_map = 
+<map name="left_room_map" id="left_room_map">
+    <area alt="" title="" href="#" data-command="limbo" shape="rect" coords="11,138,723,994" />
+</map>
+#
+
+limbo
+
+#
+@dig RightRoom = right,limbo
+#
+right
+#
+@set RightRoom/image_url = https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Do_the_Right_Thing_poster.png/220px-Do_the_Right_Thing_poster.png
+#
+@set RightRoom/image_map = 
+<map name="right_room_map" id="right_room_map">
+    <area alt="" title="" href="#" data-command="limbo" shape="rect" coords="0,0,220,325" />
+</map>
+#
+
+
+#
+@create button:tutorial_examples.red_button.RedButton
+#
+@set button/desc = 
+  This is a large red button. Now and then 
+  it flashes in an evil, yet strangely tantalizing way. 
+
+  A big sign sits next to it. It says:
+
+
+-----------
+
+ Press me! 
+
+-----------
+
+
+  ... It really begs to be pressed! You 
+know you want to! 
+
+
+#
+
+drop button
+
+#
+
+@set button/image_url = /static/webclient/media/redbutton.jpg
+#
+@set button/image_map = 
+
+<map name="button_map" id="button_map">
+    <area alt="Push the button" title="" href="#" data-command="push button" shape="circle" coords="150,150,75" />
+</map>
+
+#
+@set button/sound_url = /static/webclient/media/notification.wav
+#
+
+#thats it
+
+
+limbo
+
+
+
+
