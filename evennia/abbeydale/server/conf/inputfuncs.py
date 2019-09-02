@@ -25,28 +25,30 @@ as argument.
     default(session, cmdname, *args, **kwargs)
 
 """
+import json
+from evennia import default_cmds
+from typeclasses.rooms import Room
 
-# def oob_echo(session, *args, **kwargs):
-#     """
-#     Example echo function. Echoes args, kwargs sent to it.
-#
-#     Args:
-#         session (Session): The Session to receive the echo.
-#         args (list of str): Echo text.
-#         kwargs (dict of str, optional): Keyed echo text
-#
-#     """
-#     session.msg(oob=("echo", args, kwargs))
-#
-#
-# def default(session, cmdname, *args, **kwargs):
-#     """
-#     Handles commands without a matching inputhandler func.
-#
-#     Args:
-#         session (Session): The active Session.
-#         cmdname (str): The (unmatched) command name
-#         args, kwargs (any): Arguments to function.
-#
-#     """
-#     pass
+def dungeon_info(session, *args, **kwargs):
+
+    rooms= Room.objects.all_family()
+
+    data = {}
+
+    data['world'] = []
+    
+    for room in rooms:
+        roomdict = { 'id': room.dbid, 'name': room.name, 'key': room.key, 'exits': [], 'contents': []}
+
+        for ex in room.exits:
+            myexit = { 'id': ex.dbid, 'name': ex.name }
+            roomdict['exits'].append(myexit)
+
+        for co in room.contents:
+            mycontents= { 'id': co.dbid, 'name': co.name }
+            roomdict['contents'].append(mycontents)
+
+        data['world'].append(roomdict)
+
+    session.msg(json.dumps(data))
+
