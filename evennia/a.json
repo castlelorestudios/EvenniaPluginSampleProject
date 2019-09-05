@@ -1,0 +1,180 @@
+[
+  "dungeon_info",
+  [
+    {
+      "key": "Limbo",
+      "contents": {
+        "4": { "name": "west" },
+        "7": { "name": "east" }
+      },
+      "id": 2,
+      "exits": {
+        "4": {
+          "destinationid": 3,
+          "destination": "Left",
+          "name": "west"
+        },
+        "7": {
+          "destinationid": 6,
+          "destination": "Right",
+          "name": "east"
+        }
+      },
+      "name": "Limbo"
+    },
+    {
+      "key": "Left",
+      "contents": {
+        "10": { "name": "north" },
+        "5": { "name": "east" }
+      },
+      "id": 3,
+      "exits": {
+        "10": {
+          "destinationid": 9,
+          "destination": "North",
+          "name": "north"
+        },
+        "5": {
+          "destinationid": 2,
+          "destination": "Limbo",
+          "name": "east"
+        }
+      },
+      "name": "Left"
+    },
+    {
+      "key": "Right",
+      "contents": {
+        "8": { "name": "west" },
+        "19": { "name": "north" }
+      },
+      "id": 6,
+      "exits": {
+        "8": {
+          "destinationid": 2,
+          "destination": "Limbo",
+          "name": "west"
+        },
+        "19": {
+          "destinationid": 18,
+          "destination": "North3",
+          "name": "north"
+        }
+      },
+      "name": "Right"
+    },
+    {
+      "key": "North",
+      "contents": {
+        "11": { "name": "south" },
+        "13": { "name": "north" }
+      },
+      "id": 9,
+      "exits": {
+        "11": {
+          "destinationid": 3,
+          "destination": "Left",
+          "name": "south"
+        },
+        "13": {
+          "destinationid": 12,
+          "destination": "North2",
+          "name": "north"
+        }
+      },
+      "name": "North"
+    },
+    {
+      "key": "North2",
+      "contents": {
+        "16": { "name": "east" },
+        "14": { "name": "south" }
+      },
+      "id": 12,
+      "exits": {
+        "16": {
+          "destinationid": 15,
+          "destination": "East2",
+          "name": "east"
+        },
+        "14": {
+          "destinationid": 9,
+          "destination": "North",
+          "name": "south"
+        }
+      },
+      "name": "North2"
+    },
+    {
+      "key": "East2",
+      "contents": { "17": { "name": "west" } },
+      "id": 15,
+      "exits": {
+        "17": {
+          "destinationid": 12,
+          "destination": "North2",
+          "name": "west"
+        }
+      },
+      "name": "East2"
+    },
+    {
+      "key": "North3",
+      "contents": {
+        "20": { "name": "south" },
+        "22": { "name": "north" }
+      },
+      "id": 18,
+      "exits": {
+        "20": {
+          "destinationid": 6,
+          "destination": "Right",
+          "name": "south"
+        },
+        "22": {
+          "destinationid": 21,
+          "destination": "North4",
+          "name": "north"
+        }
+      },
+      "name": "North3"
+    },
+    {
+      "key": "North4",
+      "contents": {
+        "1": { "name": "corneel" },
+        "25": { "name": "west" },
+        "23": { "name": "south" }
+      },
+      "id": 21,
+      "exits": {
+        "25": {
+          "destinationid": 24,
+          "destination": "West2",
+          "name": "west"
+        },
+        "23": {
+          "destinationid": 18,
+          "destination": "North3",
+          "name": "south"
+        }
+      },
+      "name": "North4"
+    },
+    {
+      "key": "West2",
+      "contents": { "26": { "name": "east" } },
+      "id": 24,
+      "exits": {
+        "26": {
+          "destinationid": 21,
+          "destination": "North4",
+          "name": "east"
+        }
+      },
+      "name": "West2"
+    }
+  ],
+  { "options": {} }
+]

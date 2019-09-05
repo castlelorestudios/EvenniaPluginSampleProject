@@ -1,0 +1,1 @@
+@"c:\users\corne\docume~1\unreal~1\ue4-ev~3\evennia\evenv\scripts\python.exe" "c:\users\corne\docume~1\unreal~1\ue4-ev~3\evennia\evenv\Scripts\evennia_launcher.py" %*
