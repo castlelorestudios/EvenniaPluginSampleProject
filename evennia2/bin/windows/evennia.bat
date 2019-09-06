@@ -1,1 +1,0 @@
-@"c:\python27\python.exe" "c:\python27\Scripts\evennia_launcher.py" %*
