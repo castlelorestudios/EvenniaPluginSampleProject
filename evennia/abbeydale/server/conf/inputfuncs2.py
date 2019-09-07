@@ -56,14 +56,6 @@ import json
 from evennia import default_cmds
 from typeclasses.rooms import Room
 
-def get_current_room(session, *args, **kwargs):
-
-    argsarray = []
-    argsarray.append(session.puppet.location.key)
-
-    session.msg(get_current_room=(argsarray, kwargs))
-
-
 def dungeon_info(session, *args, **kwargs):
 
     rooms= Room.objects.all_family()
