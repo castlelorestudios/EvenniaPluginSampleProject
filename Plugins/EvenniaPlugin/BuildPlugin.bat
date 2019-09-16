@@ -1,2 +1,0 @@
-call "C:\Program Files\Epic Games\UE_4.23\Engine\Build\BatchFiles\RunUAT.bat" BuildPlugin -Plugin="%cd%\EvenniaPlugin.uplugin" -Targetplatforms=Win64 -Package="%cd%\Build"
-xcopy Build\Binaries Binaries /s /e /y /i
